@@ -1,10 +1,8 @@
 import React from 'react';
 
 const Navigation = () => (
-  <Navigation>
-    <li>
-      Navigation
-    </li>
-  </Navigation>
+  <>
+    <h2>Navigation Bar</h2>
+  </>
 );
 export default Navigation;
