@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import getTheProperties from "../requests/addproperties";
+import AddTheProperties from "../requests/addproperties";
 
 // Styles
 import "../styles/AddProperty.css";
@@ -22,7 +22,7 @@ const AddProperties = () => {
   const handleAddProperty = (event) => {
     event.preventDefault();
     // eslint-disable-next-line no-console
-    console.log(getTheProperties);
+    console.log(AddTheProperties);
   };
 
   const handleFieldChange = (event) => {

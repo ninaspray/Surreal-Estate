@@ -1,10 +1,28 @@
 import axios from "axios";
 
-const getTheProperties = async () => {
-  const response = axios.get("http://localhost:3001/add-property");
-  // eslint-disable-next-line no-console
-  console.log(response.body);
-  return response;
+const AddTheProperties = async () => {
+  await axios
+    .post("http://localhost:3000/add-property", {
+      fields: {
+        title: "string",
+        city: "string",
+        Type: "string",
+        Bedrooms: "number",
+        Bathrooms: "number",
+        Price: "number",
+        Email: "string",
+      },
+    })
+    .then(
+      (response) => {
+        // eslint-disable-next-line no-console
+        console.log(response);
+      },
+      (error) => {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      }
+    );
 };
 
-export default getTheProperties;
+export default AddTheProperties;
