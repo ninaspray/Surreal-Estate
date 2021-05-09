@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 
 // Styles
@@ -22,10 +23,21 @@ const initialState = {
 const AddProperties = () => {
   const [fields, setFields] = useState(initialState.fields);
 
-  const handleAddProperty = (event) => {
+  const handleAddProperty = async (event) => {
     event.preventDefault();
-    // eslint-disable-next-line no-console
-    console.log(fields);
+    await axios
+      .post("http://localhost:3000/api/v1/PropertyListing", fields)
+      .then((response) => {
+        // eslint-disable-next-line no-console
+        console.log(response);
+        // WHY HAS THIS WORKED?! ASK ON MONDAY
+        // eslint-disable-next-line no-console
+        console.log(response.data);
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      });
   };
 
   const handleFieldChange = (event) => {

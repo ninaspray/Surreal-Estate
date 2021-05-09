@@ -1,13 +1,18 @@
-import axios from "axios";
-import initialState from "../components/AddProperty";
+// import axios from "axios";
+// import initialState from "../components/AddProperty";
 
-axios.post("localhost:3000/api/v1/PropertyListing", { initialState }).then(
-  (response) => {
-    // eslint-disable-next-line no-console
-    console.log(response.data);
-  },
-  (error) => {
-    // eslint-disable-next-line no-console
-    console.log(error);
-  }
-);
+// const postProperty = async () => {
+//   const response = axios
+//     .post("localhost:3000/api/v1/PropertyListing", { initialState })
+//     .then(
+//       (response) => {
+//         // eslint-disable-next-line no-console
+//         console.log(response.data);
+//       },
+//       (error) => {
+//         // eslint-disable-next-line no-console
+//         console.log(error);
+//       }
+//     );
+// };
+// export default postProperty;
