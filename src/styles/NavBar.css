@@ -1,19 +1,23 @@
-.Nav-Wrap {
-    background-color: lightgreen;
+.Nav-wrap {
+    display: inline-flex;
+    background-color: white;
+    width: 1333px; /* applying max-width */
+    margin: 0 auto; /* center */
+}
+
+.SurrealLogo {
+    width: 200px;
+    height: 80px;
+    overflow: hidden;
+    background-color: white;
 }
 
 .navbar-links {
-    margin: 0%;
-    padding: 4%;
-    padding-bottom: 2%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .navbar-links-item {
-    margin: 0;
-    display: inline-block;
-    padding-inline-end: 3%;
-}
-
-.surrealLogo {
-    size: 20%;
+    padding-right: 5rem;
 }
