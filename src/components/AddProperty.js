@@ -15,11 +15,15 @@ const AddProperties = () => {
 
   const handleAddProperty = (event) => {
     event.preventDefault();
+    // eslint-disable-next-line no-console
     console.log(fields);
   };
 
   const handleFieldChange = (event) => {
-    setFields({ ...fields, [event.target.name]: event.target.value });
+    setFields({
+      ...fields,
+      [event.target.name]: event.target.value,
+    });
   };
 
   return (
@@ -35,7 +39,7 @@ const AddProperties = () => {
             onChange={handleFieldChange}
           />
         </label>
-        <button type="submit">submit</button>
+        <button type="submit">Add</button>
       </form>
     </div>
   );
