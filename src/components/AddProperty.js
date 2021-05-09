@@ -14,6 +14,10 @@ const initialState = {
     Price: "",
     Email: "",
   },
+  alert: {
+    message: "",
+    isSuccess: false,
+  },
 };
 
 const AddProperties = () => {

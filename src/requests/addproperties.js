@@ -2,7 +2,7 @@ import axios from "axios";
 
 const AddTheProperties = async () => {
   await axios
-    .post("http://localhost:3000/add-property", {
+    .post("http://localhost:3000/api/v1/PropertyListing", {
       fields: {
         title: "string",
         city: "string",
