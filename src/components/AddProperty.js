@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import AddTheProperties from "../requests/addproperties";
 
 // Styles
 import "../styles/AddProperty.css";
@@ -7,11 +6,11 @@ import "../styles/AddProperty.css";
 const initialState = {
   fields: {
     title: "",
-    city: "Manchester",
-    Type: "",
+    type: "",
     Bedrooms: "",
     Bathrooms: "",
     Price: "",
+    City: "",
     Email: "",
   },
   alert: {
@@ -26,7 +25,7 @@ const AddProperties = () => {
   const handleAddProperty = (event) => {
     event.preventDefault();
     // eslint-disable-next-line no-console
-    console.log(AddTheProperties);
+    console.log(fields);
   };
 
   const handleFieldChange = (event) => {
