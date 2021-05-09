@@ -9,11 +9,13 @@ const Alert = ({ message, success }) => {
   );
 };
 
-export default Alert;
+Alert.defaultProps = {
+  success: false,
+};
 
 Alert.propTypes = {
-  // eslint-disable-next-line react/require-default-props
   message: PropTypes.string.isRequired,
-  // eslint-disable-next-line react/require-default-props
   success: PropTypes.bool,
 };
+
+export default Alert;

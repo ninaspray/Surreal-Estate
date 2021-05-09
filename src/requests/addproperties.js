@@ -14,9 +14,11 @@ const AddTheProperties = async () => {
       },
     })
     .then(
-      (response) => {
-        // eslint-disable-next-line no-console
-        console.log(response);
+        setAlert({
+            message: "Property Added",
+            isSuccess: true,
+          })
+    )
       },
       (error) => {
         // eslint-disable-next-line no-console
