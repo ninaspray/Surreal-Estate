@@ -1,18 +1,24 @@
 // import axios from "axios";
-// import initialState from "../components/AddProperty";
+// import { fields } from "../components/AddProperty";
+// import setAlert from "../components/AddProperty";
 
-// const postProperty = async () => {
-//   const response = axios
-//     .post("localhost:3000/api/v1/PropertyListing", { initialState })
-//     .then(
-//       (response) => {
-//         // eslint-disable-next-line no-console
-//         console.log(response.data);
-//       },
-//       (error) => {
-//         // eslint-disable-next-line no-console
-//         console.log(error);
-//       }
-//     );
+// const postProperty = async (fields) => {
+//   // eslint-disable-next-line no-restricted-globals
+//   event.preventDefault();
+//   setAlert({ message: "", isSuccess: false });
+//   await axios
+//     .post("http://localhost:3000/api/v1/PropertyListing", fields)
+//     .then(() => {
+//       setAlert({
+//         message: "Property added",
+//         isSuccess: true,
+//       });
+//     })
+//     .catch(() => {
+//       setAlert({
+//         message: "Server error. Please try again later",
+//         isSuccess: false,
+//       });
+//     });
 // };
 // export default postProperty;
